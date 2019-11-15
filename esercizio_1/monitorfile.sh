@@ -9,28 +9,6 @@
 # Note:
 # Modifiche:
 
-## -o-o-o-o- Init script da inserire in init.d
-##! /bin/sh
-## /etc/init.d/monitorfile
-##
-#
-#case "$1" in
-#  start)
-#    nohup monitorfile.sh > /var/log/nohupmonitorfile.log &
-#    ;;
-#  stop)
-#     pkill monitorfile.sh
-#    ;;
-#  *)
-#    echo "Usage: /etc/init.d/monitorfile {start|stop}"
-#    exit 1
-#    ;;
-#esac
-#
-#exit 0
-## -o-o-o-o- Fine init script
-
-
 # Inizializzazione Variabili
 FILE_LOG1=/var/log/apache/access_site_a.log
 FILE_LOG2=/var/log/apache/access_site_b.log
