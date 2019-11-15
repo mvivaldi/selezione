@@ -3,7 +3,7 @@
 # Autore:       Matteo Pastorelli
 # Data:         13/11/2019
 # Versione:     1.0
-# Utilizzo:     Per lanciare script al boot il file init di start-stop monitoraggio deve essere inserito nella dir /etc/init.d e va aggiornato rc.d con update-rc.d
+# Utilizzo:     Per lanciare script al boot il file start-monitoring deve essere inserito nella dir /etc/init.d e va aggiornato rc.d con update-rc.d
 #               Per utilizzo singolo : nohup monitorfile.sh > /var/log/nohupmonitorfile.log &
 #
 # Note:
