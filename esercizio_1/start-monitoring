@@ -1,0 +1,19 @@
+#! /bin/sh
+# Init script da inserire nella directory /etc/init.d ed aggiornare i run-level con update-rc.d per far partire il monitoraggio dei file di log al boot del sistema
+#
+
+case "$1" in
+  start)
+    nohup monitorfile.sh > /var/log/nohupmonitorfile.log &
+    ;;
+  stop)
+     pkill monitorfile.sh
+    ;;
+  *)
+    echo "Usage: /etc/init.d/monitorfile {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0
+
