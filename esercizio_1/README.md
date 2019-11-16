@@ -7,6 +7,10 @@ Abbiamo un apache con 3 virtualhost (site_a, site_b, site_c), ogni virtualhost h
 
 
 ### SOLUZIONE error_404
-- Aggiungere nel file di configurazione dei virtualhost la seguente stringa
-  ErrorDocument 404 /percorsoScript/webhookError404.sh
+- Installare swatch sul sistema.
+- Copiare il contenuto del file init.d_swatch.sh in vim /etc/init.d/swatch
+- Abilitare l'esecuzione all'avvio systemctl enable swatch.service
+- utilizzare swatch_01.conf
+
   
+
