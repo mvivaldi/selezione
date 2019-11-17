@@ -1,9 +1,10 @@
 version: "1"
 services:
   app:
-    container_name: app
-    restart: always
-    build: ./path/to/your/dockerfile/root
+    build:
+      context: .
+    volumes:
+      - ./percorsoApp/ShopCatalogApplication.war:/usr/local/tomcat/webapps/ShopCatalogApplication.war
     ports:
       - "8080:8080"
     links:
