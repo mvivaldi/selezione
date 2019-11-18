@@ -7,3 +7,6 @@ Migliorativo:
 - se il branch nei quali si fa il commit e' diverso dal master pubblicare l'immagine con un tag DEV e metterla in produzione sul docker di DEV
 
 e' possibile usare qualsiasi sistema di CI (gitlab-ci, travis-ci, drone ecc.).
+
+
+Non ho avuto tempo di configurarre la pipeline, però qeusta puo' essere configurata attraverso le istruzioni presenti a questo sito:  https://jenkins.io/doc/book/pipeline/docker/  

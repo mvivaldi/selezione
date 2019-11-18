@@ -1,0 +1,26 @@
+version: '1'
+services:
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+    - "27017:27017"
+    environment:
+    - MONGO_INITDB_DATABASE=shop_db
+    - MMONGO_INITDB_ROOT_USERNAME=user
+    - MMONGO_INITDB_ROOT_PASSWORDE=password
+    volumes:
+    - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+    - ./mongo-volume:/data/db
+  app:
+    build:
+      context: .
+      dockerfile: dockerfile_shop_catalog 
+    ports:
+     - "8080:8080"
+  webapp:
+    build:
+      context: .
+      dockerfile: dockerfile_shop_purchase 
+    ports:
+     - "8080:8081"

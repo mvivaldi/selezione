@@ -1,0 +1,8 @@
+FROM maven:3-jdk-12
+RUN mkdir -p /app/
+RUN mkdir -p /app/src
+COPY 2.1-shop-purchase/pom.xml /app
+COPY 2.1-shop-purchase/src /app/src
+WORKDIR /app/
+EXPOSE 8080
+RUN mvn -f /app/pom.xml clean package 
